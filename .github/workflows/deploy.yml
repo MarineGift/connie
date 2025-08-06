@@ -8,6 +8,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./  # << 필요한 경우 하위 폴더로 수정
 
     steps:
       - name: 📥 Checkout repository
@@ -19,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: 📦 Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: 🛠️ Build Next.js app
         run: npm run build
