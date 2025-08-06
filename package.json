@@ -2,8 +2,10 @@
   "name": "connie",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
+    "preinstall": "echo replacing npm ci with npm install",
+    "install": "npm install",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start"
   },
   "dependencies": {
